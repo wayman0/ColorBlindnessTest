@@ -12,20 +12,68 @@ const buttons = document.getElementsByClassName("rowButton");
 let startButton, endButton;
 let tempColor;
 
+randomizeRows();
+
 for(const button of buttons)
 {
     button.addEventListener("mousedown", handleMouseDown);
     button.addEventListener("mouseup",   handleMouseUp);
 }
 
-//for(const element of row0B)
-//    element.addEventListener("click", handleClick);
-//
-//for(const element of row1B)
-//    element.addEventListener("click", handleClick);
-//
-//for(const element of row2B)
-//    element.addEventListener("click", handleClick);
+function randomizeRows()
+{
+    randomizeRow0();
+    randomizeRow1();
+    randomizeRow2();
+}
+
+function randomizeRow0()
+{
+    for(let swap = 0; swap < row0B.length; swap += 1)
+    {
+        const rIndex1 = Math.trunc(Math.random() * (row0B.length-1));
+        const rIndex2 = Math.trunc(Math.random() * (row0B.length-1));
+
+        const b1 = row0B[rIndex1];
+        const b2 = row0B[rIndex2];
+
+        const tempColor = getComputedStyle(b1)['backgroundColor'];
+        b1.style.backgroundColor = getComputedStyle(b2)['backgroundColor']
+        b2.style.backgroundColor = tempColor;
+    }
+}
+
+function randomizeRow1()
+{
+    for(let swap = 0; swap < row1B.length; swap += 1)
+    {
+        const rIndex1 = Math.trunc(Math.random() * (row1B.length-1));
+        const rIndex2 = Math.trunc(Math.random() * (row1B.length-1));
+
+        const b1 = row1B[rIndex1];
+        const b2 = row1B[rIndex2];
+        
+        const tempColor = getComputedStyle(b1)['backgroundColor'];
+        b1.style.backgroundColor = getComputedStyle(b2)['backgroundColor']
+        b2.style.backgroundColor = tempColor;
+    }
+}
+
+function randomizeRow2()
+{
+    for(let swap = 0; swap < row2B.length; swap += 1)
+    {
+        const rIndex1 = Math.trunc(Math.random() * (row2B.length-1));
+        const rIndex2 = Math.trunc(Math.random() * (row2B.length-1));
+
+        const b1 = row2B[rIndex1];
+        const b2 = row2B[rIndex2];
+
+        const tempColor = getComputedStyle(b1)['backgroundColor'];
+        b1.style.backgroundColor = getComputedStyle(b2)['backgroundColor']
+        b2.style.backgroundColor = tempColor;
+    }
+}
 
 function handleMouseDown(e)
 {
@@ -65,26 +113,6 @@ function handleMouseUp(e)
             handleRow2Up(e, button);
 }
 
-function handleClick(e)
-{
-    const buttonID = e.target.id;
-    let row = 0;
-    let clickedID;
-
-    for(const button of row0B)
-        if(button.id == buttonID)
-            handleRow0(e, button);
-        
-    for(const button of row1B)
-        if(button.id == buttonID)
-            handleRow1(e, button);
-    
-    for(const button of row2B)
-        if(button.id == buttonID)
-            handleRow2(e, button);
-    
-}
-
 function handleRow0Down(e, button)
 {
     startButton = button;
@@ -111,7 +139,7 @@ function handleRow0Up(e, button)
 
     endButton = undefined;
     startButton = undefined;
-     tempColor = undefined;
+    tempColor = undefined;
 }
 
 function handleRow1Up(e, button)
@@ -119,9 +147,10 @@ function handleRow1Up(e, button)
     endButton = button;
     startButton.style.backgroundColor = getComputedStyle(endButton)['backgroundColor'];
     endButton.style.backgroundColor = tempColor;
+
     endButton = undefined;
     startButton = undefined;
-     tempColor = undefined;
+    tempColor = undefined;
 }
 
 function handleRow2Up(e, button)
@@ -129,7 +158,8 @@ function handleRow2Up(e, button)
     endButton = button;
     startButton.style.backgroundColor = getComputedStyle(endButton)['backgroundColor'];
     endButton.style.backgroundColor = tempColor;
+
     endButton = undefined;
     startButton = undefined;
-     tempColor = undefined;
+    tempColor = undefined;
 }
