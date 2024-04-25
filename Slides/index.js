@@ -48,7 +48,7 @@ brRowColors[1][rgRowColors[1].length-1] = 255;
 let dragged;
 let buttonOver;
 
-//randomizeRows();
+randomizeRows();
 
 r0Check.addEventListener("click", checkRow0);
 r1Check.addEventListener("click", checkRow1);
