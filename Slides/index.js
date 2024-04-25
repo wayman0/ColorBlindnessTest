@@ -11,7 +11,9 @@ const buttons = document.getElementsByClassName("rowButton");
 
 let dragged;
 let buttonOver;
-//randomizeRows();
+
+randomizeRows();
+
 for(const button of buttons)
 {
     button.addEventListener("dragstart", handleDragStart);
@@ -83,6 +85,11 @@ function handleDragOver(e)
 {
     e.preventDefault();
     
+    if(buttonOver != e.target)
+    {
+        buttonOver = e.target;
+        dragged.parentNode.insertBefore(dragged, buttonOver);
+    }
 }
 
 function handleDrop(e)
