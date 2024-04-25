@@ -58,6 +58,12 @@ body
     height:20%;
 }
 
+.check
+{
+    width:5%;
+    height:15%;
+}
+
 #r0b00{background-color: rgb(255, 000, 000);}
 #r0b01{background-color: rgb(245, 010, 000);}
 #r0b02{background-color: rgb(235, 020, 000);}
@@ -83,6 +89,12 @@ body
 #r0b22{background-color: rgb(035, 220, 000);}
 #r0b23{background-color: rgb(025, 230, 000);}
 #r0b24{background-color: rgb(015, 240, 000);}
+#r0b25
+{
+    border:none;
+    outline:none;
+    background-color: rgb(255, 255, 255);
+}
 
 #r1b00{background-color: rgb(000, 255, 000);}
 #r1b01{background-color: rgb(000, 245, 010);}
@@ -109,6 +121,12 @@ body
 #r1b22{background-color: rgb(000, 035, 220);}
 #r1b23{background-color: rgb(000, 025, 230);}
 #r1b24{background-color: rgb(000, 015, 240);}
+#r1b25
+{
+    border:none;
+    outline:none;
+    background-color: rgb(255, 255, 255);
+}
 
 #r2b00{background-color: rgb(000, 000, 255);}
 #r2b01{background-color: rgb(010, 000, 245);}
@@ -135,3 +153,9 @@ body
 #r2b22{background-color: rgb(220, 000, 035);}
 #r2b23{background-color: rgb(230, 000, 025);}
 #r2b24{background-color: rgb(240, 000, 015);}
+#r2b25
+{
+    border:none;
+    outline:none;
+    background-color: rgb(255, 255, 255);
+}
