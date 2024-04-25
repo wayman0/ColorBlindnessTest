@@ -64,31 +64,31 @@ body
     height:15%;
 }
 
-#r0b00{background-color: rgb(255, 000, 000);}
-#r0b01{background-color: rgb(245, 010, 000);}
-#r0b02{background-color: rgb(235, 020, 000);}
-#r0b03{background-color: rgb(225, 030, 000);}
-#r0b04{background-color: rgb(215, 040, 000);}
-#r0b05{background-color: rgb(205, 050, 000);}
-#r0b06{background-color: rgb(195, 060, 000);}
-#r0b07{background-color: rgb(185, 070, 000);}
-#r0b08{background-color: rgb(175, 080, 000);}
-#r0b09{background-color: rgb(165, 090, 000);}
-#r0b10{background-color: rgb(155, 100, 000);}
-#r0b11{background-color: rgb(145, 110, 000);}
-#r0b12{background-color: rgb(135, 120, 000);}
-#r0b13{background-color: rgb(125, 130, 000);}
-#r0b14{background-color: rgb(115, 140, 000);}
-#r0b15{background-color: rgb(105, 150, 000);}
-#r0b16{background-color: rgb(095, 160, 000);}
-#r0b17{background-color: rgb(085, 170, 000);}
-#r0b18{background-color: rgb(075, 180, 000);}
-#r0b19{background-color: rgb(065, 190, 000);}
-#r0b20{background-color: rgb(055, 200, 000);}
-#r0b21{background-color: rgb(045, 210, 000);}
-#r0b22{background-color: rgb(035, 220, 000);}
-#r0b23{background-color: rgb(025, 230, 000);}
-#r0b24{background-color: rgb(015, 240, 000);}
+#r0b00{background-color: rgb(250, 020, 000);}
+#r0b01{background-color: rgb(250, 040, 000);}
+#r0b02{background-color: rgb(250, 060, 000);}
+#r0b03{background-color: rgb(250, 080, 000);}
+#r0b04{background-color: rgb(250, 100, 000);}
+#r0b05{background-color: rgb(250, 120, 000);}
+#r0b06{background-color: rgb(250, 140, 000);}
+#r0b07{background-color: rgb(250, 160, 000);}
+#r0b08{background-color: rgb(250, 180, 000);}
+#r0b09{background-color: rgb(250, 200, 000);}
+#r0b10{background-color: rgb(250, 220, 000);}
+#r0b11{background-color: rgb(250, 240, 000);}
+#r0b12{background-color: rgb(255, 255, 000);}
+#r0b13{background-color: rgb(240, 255, 000);}
+#r0b14{background-color: rgb(220, 255, 000);}
+#r0b15{background-color: rgb(200, 255, 000);}
+#r0b16{background-color: rgb(180, 255, 000);}
+#r0b17{background-color: rgb(160, 255, 000);}
+#r0b18{background-color: rgb(140, 255, 000);}
+#r0b19{background-color: rgb(120, 255, 000);}
+#r0b20{background-color: rgb(100, 255, 000);}
+#r0b21{background-color: rgb(080, 255, 000);}
+#r0b22{background-color: rgb(060, 255, 000);}
+#r0b23{background-color: rgb(040, 255, 000);}
+#r0b24{background-color: rgb(020, 255, 000);}
 #r0b25
 {
     border:none;
@@ -96,31 +96,31 @@ body
     background-color: rgb(255, 255, 255);
 }
 
-#r1b00{background-color: rgb(000, 255, 000);}
-#r1b01{background-color: rgb(000, 245, 010);}
-#r1b02{background-color: rgb(000, 235, 020);}
-#r1b03{background-color: rgb(000, 225, 030);}
-#r1b04{background-color: rgb(000, 215, 040);}
-#r1b05{background-color: rgb(000, 205, 050);}
-#r1b06{background-color: rgb(000, 195, 060);}
-#r1b07{background-color: rgb(000, 185, 070);}
-#r1b08{background-color: rgb(000, 175, 080);}
-#r1b09{background-color: rgb(000, 165, 090);}
-#r1b10{background-color: rgb(000, 155, 100);}
-#r1b11{background-color: rgb(000, 145, 110);}
-#r1b12{background-color: rgb(000, 135, 120);}
-#r1b13{background-color: rgb(000, 125, 130);}
-#r1b14{background-color: rgb(000, 115, 140);}
-#r1b15{background-color: rgb(000, 105, 150);}
-#r1b16{background-color: rgb(000, 095, 160);}
-#r1b17{background-color: rgb(000, 085, 170);}
-#r1b18{background-color: rgb(000, 075, 180);}
-#r1b19{background-color: rgb(000, 065, 190);}
-#r1b20{background-color: rgb(000, 055, 200);}
-#r1b21{background-color: rgb(000, 045, 210);}
-#r1b22{background-color: rgb(000, 035, 220);}
-#r1b23{background-color: rgb(000, 025, 230);}
-#r1b24{background-color: rgb(000, 015, 240);}
+#r1b00{background-color: rgb(000, 250, 020);}
+#r1b01{background-color: rgb(000, 250, 040);}
+#r1b02{background-color: rgb(000, 250, 060);}
+#r1b03{background-color: rgb(000, 250, 080);}
+#r1b04{background-color: rgb(000, 250, 100);}
+#r1b05{background-color: rgb(000, 250, 120);}
+#r1b06{background-color: rgb(000, 250, 140);}
+#r1b07{background-color: rgb(000, 250, 160);}
+#r1b08{background-color: rgb(000, 250, 180);}
+#r1b09{background-color: rgb(000, 250, 200);}
+#r1b10{background-color: rgb(000, 250, 220);}
+#r1b11{background-color: rgb(000, 250, 240);}
+#r1b12{background-color: rgb(000, 255, 255);}
+#r1b13{background-color: rgb(000, 240, 255);}
+#r1b14{background-color: rgb(000, 220, 255);}
+#r1b15{background-color: rgb(000, 200, 255);}
+#r1b16{background-color: rgb(000, 180, 255);}
+#r1b17{background-color: rgb(000, 160, 255);}
+#r1b18{background-color: rgb(000, 140, 255);}
+#r1b19{background-color: rgb(000, 120, 255);}
+#r1b20{background-color: rgb(000, 100, 255);}
+#r1b21{background-color: rgb(000, 080, 255);}
+#r1b22{background-color: rgb(000, 060, 255);}
+#r1b23{background-color: rgb(000, 040, 255);}
+#r1b24{background-color: rgb(000, 020, 255);}
 #r1b25
 {
     border:none;
@@ -128,31 +128,31 @@ body
     background-color: rgb(255, 255, 255);
 }
 
-#r2b00{background-color: rgb(000, 000, 255);}
-#r2b01{background-color: rgb(010, 000, 245);}
-#r2b02{background-color: rgb(020, 000, 235);}
-#r2b03{background-color: rgb(030, 000, 225);}
-#r2b04{background-color: rgb(040, 000, 215);}
-#r2b05{background-color: rgb(050, 000, 205);}
-#r2b06{background-color: rgb(060, 000, 195);}
-#r2b07{background-color: rgb(070, 000, 185);}
-#r2b08{background-color: rgb(080, 000, 175);}
-#r2b09{background-color: rgb(090, 000, 165);}
-#r2b10{background-color: rgb(100, 000, 155);}
-#r2b11{background-color: rgb(110, 000, 145);}
-#r2b12{background-color: rgb(120, 000, 135);}
-#r2b13{background-color: rgb(130, 000, 125);}
-#r2b14{background-color: rgb(140, 000, 115);}
-#r2b15{background-color: rgb(150, 000, 105);}
-#r2b16{background-color: rgb(160, 000, 095);}
-#r2b17{background-color: rgb(170, 000, 085);}
-#r2b18{background-color: rgb(180, 000, 075);}
-#r2b19{background-color: rgb(190, 000, 065);}
-#r2b20{background-color: rgb(200, 000, 055);}
-#r2b21{background-color: rgb(210, 000, 045);}
-#r2b22{background-color: rgb(220, 000, 035);}
-#r2b23{background-color: rgb(230, 000, 025);}
-#r2b24{background-color: rgb(240, 000, 015);}
+#r2b00{background-color: rgb(020, 000, 250);}
+#r2b01{background-color: rgb(040, 000, 250);}
+#r2b02{background-color: rgb(060, 000, 250);}
+#r2b03{background-color: rgb(080, 000, 250);}
+#r2b04{background-color: rgb(100, 000, 250);}
+#r2b05{background-color: rgb(120, 000, 250);}
+#r2b06{background-color: rgb(140, 000, 250);}
+#r2b07{background-color: rgb(160, 000, 250);}
+#r2b08{background-color: rgb(180, 000, 250);}
+#r2b09{background-color: rgb(200, 000, 250);}
+#r2b10{background-color: rgb(220, 000, 250);}
+#r2b11{background-color: rgb(240, 000, 250);}
+#r2b12{background-color: rgb(255, 000, 255);}
+#r2b13{background-color: rgb(255, 000, 240);}
+#r2b14{background-color: rgb(255, 000, 220);}
+#r2b15{background-color: rgb(255, 000, 200);}
+#r2b16{background-color: rgb(255, 000, 180);}
+#r2b17{background-color: rgb(255, 000, 160);}
+#r2b18{background-color: rgb(255, 000, 140);}
+#r2b19{background-color: rgb(255, 000, 120);}
+#r2b20{background-color: rgb(255, 000, 100);}
+#r2b21{background-color: rgb(255, 000, 080);}
+#r2b22{background-color: rgb(255, 000, 060);}
+#r2b23{background-color: rgb(255, 000, 040);}
+#r2b24{background-color: rgb(255, 000, 020);}
 #r2b25
 {
     border:none;
