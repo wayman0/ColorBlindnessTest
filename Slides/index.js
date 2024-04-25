@@ -12,38 +12,16 @@ const row2Check = document.getElementById("r2Check");
 
 const buttons = document.getElementsByClassName("rowButton");
 
-const rgRowColors = new Array(2);
-rgRowColors[0] = new Array(row0B.length);
-rgRowColors[1] = new Array(row0B.length);
+const rgRowColors = new Array(row0B.length);
+const gbRowColors = new Array(row1B.length);
+const brRowColors = new Array(row2B.length);
 
-const gbRowColors = new Array(2);
-gbRowColors[0] = new Array(row1B.length);
-gbRowColors[1] = new Array(row1B.length);
-
-const brRowColors = new Array(2);
-brRowColors[0] = new Array(row2B.length);
-brRowColors[1] = new Array(row2B.length);
-
-for(let index = 0; index < rgRowColors[0].length; index += 1)
+for(let index = 0; index < rgRowColors.length; index += 1)
 {
-    rgRowColors[0][index] = 255 - (10 * index);
-    rgRowColors[1][index] =   0 + (10 * index);
-
-    gbRowColors[0][index] = 255 - (10 * index);
-    gbRowColors[1][index] =   0 + (10 * index);
-
-    brRowColors[0][index] = 255 - (10 * index);
-    brRowColors[1][index] =   0 + (10 * index);
+    rgRowColors[index] = getComputedStyle(row0B[index])['backgroundColor'];
+    gbRowColors[index] = getComputedStyle(row1B[index])['backgroundColor'];
+    brRowColors[index] = getComputedStyle(row2B[index])['backgroundColor'];
 }
-
-rgRowColors[0][rgRowColors[0].length-1] = 255;
-rgRowColors[1][rgRowColors[1].length-1] = 255;
-
-gbRowColors[0][rgRowColors[0].length-1] = 255;
-gbRowColors[1][rgRowColors[1].length-1] = 255;
-
-brRowColors[0][rgRowColors[0].length-1] = 255;
-brRowColors[1][rgRowColors[1].length-1] = 255;
 
 let dragged;
 let buttonOver;
@@ -119,7 +97,10 @@ function randomizeRow2()
 
 function handleDragStart(e)
 {
-    dragged = e.target;
+    if(e.target.id.includes("25"))
+        alert("Error, you can't drag that box");
+    else
+        dragged = e.target;
 }
 
 function handleDragOver(e)
@@ -144,19 +125,9 @@ function checkRow0(e)
     for(let index = 0; index < row0B.length; index += 1)
     {
         const style = getComputedStyle(row0B[index])['backgroundColor'];
-        
-        const startP = style.indexOf('(');
-        const endP = style.indexOf(')');
-        
-        const rgbStr = style.substring(startP+1, endP);
-        const rgbArr = rgbStr.split(", ");
-        
-        const rStr = rgbArr[0];
-        const gStr = rgbArr[1];
 
-        if(! (rStr == rgRowColors[0][index] &&
-              gStr == rgRowColors[1][index]))
-                correct = false;
+        if(style != rgRowColors[index])           
+            correct = false;
     }
 
     alert(correct? "You Got This Row Right":"You Got This Row Wrong");
@@ -168,19 +139,8 @@ function checkRow1(e)
     for(let index = 0; index < row1B.length; index += 1)
     {
         const style = getComputedStyle(row1B[index])['backgroundColor'];
-        
-        const startP = style.indexOf('(');
-        const endP = style.indexOf(')');
-        
-        const rgbStr = style.substring(startP+1, endP);
-        const rgbArr = rgbStr.split(", ");
-        
-        const gStr = rgbArr[1];
-        const bStr = rgbArr[2];
-
-        if(! (gStr == gbRowColors[0][index] &&
-              bStr == gbRowColors[1][index]))
-                correct = false;
+        if(style != gbRowColors[index])           
+            correct = false;
     }
 
     alert(correct? "You Got This Row Right":"You Got This Row Wrong");
@@ -192,19 +152,8 @@ function checkRow2(e)
     for(let index = 0; index < row2B.length; index += 1)
     {
         const style = getComputedStyle(row2B[index])['backgroundColor'];
-        
-        const startP = style.indexOf('(');
-        const endP = style.indexOf(')');
-        
-        const rgbStr = style.substring(startP+1, endP);
-        const rgbArr = rgbStr.split(", ");
-        
-        const bStr = rgbArr[2];
-        const rStr = rgbArr[0];
-
-        if(! (bStr == brRowColors[0][index] &&
-              rStr == brRowColors[1][index]))
-                correct = false;
+        if(style != brRowColors[index])           
+            correct = false;
     }
 
     alert(correct? "You Got This Row Right":"You Got This Row Wrong");
