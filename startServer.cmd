@@ -1,1 +1,1 @@
-http-server -c-1 -p 8080 -o index.html
+http-server -c-1 -p 8080 -o /ShowAnsw/

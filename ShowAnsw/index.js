@@ -25,6 +25,10 @@ const rgRowColors = new Array(row0B.length);
 const gbRowColors = new Array(row1B.length);
 const brRowColors = new Array(row2B.length);
 
+let rgChecks = []; 
+let gbChecks = []; 
+let brChecks = [];
+
 for(let index = 0; index < rgRowColors.length; index += 1)
 {
     rgRowColors[index] = getComputedStyle(row0B[index])['backgroundColor'];
@@ -41,13 +45,13 @@ r0Check.addEventListener("click", checkRow0);
 r1Check.addEventListener("click", checkRow1);
 r2Check.addEventListener("click", checkRow2);
 
-r0Show.addEventListener("click", showRow0);
-r1Show.addEventListener("click", showRow1);
-r2Show.addEventListener("click", showRow2);
+r0Show.addEventListener("click", () => {row0S.style.visibility = "visible";});
+r1Show.addEventListener("click", () => {row1S.style.visibility = "visible";});
+r2Show.addEventListener("click", () => {row2S.style.visibility = "visible";});
 
-r0Hide.addEventListener("click", hideRow0);
-r1Hide.addEventListener("click", hideRow1);
-r2Hide.addEventListener("click", hideRow2);
+r0Hide.addEventListener("click", () => {row0S.style.visibility = "hidden";});
+r1Hide.addEventListener("click", () => {row1S.style.visibility = "hidden";});
+r2Hide.addEventListener("click", () => {row2S.style.visibility = "hidden";});
 
 for(const button of buttons)
 {
@@ -117,6 +121,17 @@ function handleDragStart(e)
         alert("Error, you can't drag that box");
     else
         dragged = e.target;
+
+    if(dragged.id.charAt(1) == '0')
+        for(const button of row0B)
+            button.textContent = " ";
+    else if(dragged.id.charAt(1) == '1')
+        for(const button of row1B)
+            button.textContent = " ";
+    else if(dragged.id.charAt(1) == '2')
+        for(const button of row2B)
+            button.textContent = " ";
+
 }
 
 function handleDragOver(e)
@@ -145,9 +160,15 @@ function checkRow0(e)
 
         if(style == rgRowColors[index])           
             correct += 1;
+        else
+            row0B[index].textContent = "X";
     }
 
+    rgChecks.push(correct);
     alert("You got " + correct + " out of " + (row0B.length-1) + " right.\nThat is a " + (correct/(row0B.length-1)) * 100 + "%");
+
+    if(correct == row0B.length-1)
+        alert("Here is your progress: \n" + rgChecks)
 }
 
 function checkRow1(e)
@@ -158,9 +179,15 @@ function checkRow1(e)
         const style = getComputedStyle(row1B[index])['backgroundColor'];
         if(style == gbRowColors[index])           
             correct += 1;
+        else
+            row1B[index].textContent = "X";
     }
 
+    gbChecks.push(correct);
     alert("You got " + correct + " out of " + (row1B.length-1) + " right.\nThat is a " + (correct/(row1B.length-1)) * 100 + "%");
+
+    if(correct == row1B.length-1)
+        alert("Here is your progress: \n" + gbChecks)
 }
 
 function checkRow2(e)
@@ -171,37 +198,13 @@ function checkRow2(e)
         const style = getComputedStyle(row2B[index])['backgroundColor'];
         if(style == brRowColors[index])           
             correct += 1;
+        else
+            row2B[index].textContent = "X";
     }
 
+    brChecks.push(correct);
     alert("You got " + correct + " out of " + (row2B.length-1) + " right.\nThat is a " + (correct/(row2B.length-1)) * 100 + "%");
-}
 
-function showRow0(e)
-{
-    row0S.style.visibility = "visible";
-}
-
-function showRow1(e)
-{
-    row1S.style.visibility = "visible";
-}
-
-function showRow2(e)
-{
-    row2S.style.visibility = "visible";
-}
-
-function hideRow0(e)
-{
-    row0S.style.visibility = "hidden";
-}
-
-function hideRow1(e)
-{
-    row1S.style.visibility = "hidden";
-}
-
-function hideRow2(e)
-{
-    row2S.style.visibility = "hidden";
+    if(correct == row2B.length-1)
+        alert("Here is your progress: \n" + brChecks)
 }
