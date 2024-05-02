@@ -1,1 +1,1 @@
-http-server -c-1 -p 8080 -o /ShowAnsw/
+http-server -c-1 -p 8080 -o /CalcScore/
