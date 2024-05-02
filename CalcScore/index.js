@@ -4,6 +4,7 @@ const row0B = row0D.getElementsByClassName("rowButton");
 const r0Check = document.getElementById("r0Check");
 const r0Show = document.getElementById("r0Show");
 const r0Hide = document.getElementById("r0Hide");
+const r0Results = document.getElementById("r0Results");
 
 const row1S = document.getElementById("row1Show");
 const row1D = document.getElementById("row1Butt");
@@ -11,6 +12,7 @@ const row1B = row1D.getElementsByClassName("rowButton");
 const r1Check = document.getElementById("r1Check");
 const r1Show = document.getElementById("r1Show");
 const r1Hide = document.getElementById("r1Hide");
+const r1Results = document.getElementById("r1Results");
 
 const row2S = document.getElementById("row2Show")
 const row2D = document.getElementById("row2Butt");
@@ -18,6 +20,7 @@ const row2B = row2D.getElementsByClassName("rowButton");
 const r2Check = document.getElementById("r2Check");
 const r2Show = document.getElementById("r2Show");
 const r2Hide = document.getElementById("r2Hide");
+const r2Results = document.getElementById("r2Results");
 
 const buttons = document.getElementsByClassName("rowButton");
 
@@ -25,12 +28,13 @@ const rgRowColors = new Array(row0B.length);
 const gbRowColors = new Array(row1B.length);
 const brRowColors = new Array(row2B.length);
 
-const totRYScore = new Array();
-const totYGScore = new Array();
-const totGCScore = new Array();
-const totCBScore = new Array();
-const totBPScore = new Array();
-const totPRScore = new Array();
+// export to allow them to be used in the results files
+export const totRYScore = new Array();
+export const totYGScore = new Array();
+export const totGCScore = new Array();
+export const totCBScore = new Array();
+export const totBPScore = new Array();
+export const totPRScore = new Array();
 
 for(let index = 0; index < rgRowColors.length; index += 1)
 {
@@ -55,6 +59,11 @@ r2Show.addEventListener("click", () => {row2S.style.visibility = "visible";});
 r0Hide.addEventListener("click", () => {row0S.style.visibility = "hidden";});
 r1Hide.addEventListener("click", () => {row1S.style.visibility = "hidden";});
 r2Hide.addEventListener("click", () => {row2S.style.visibility = "hidden";});
+
+r0Results.addEventListener("click", () => {window.open(window.location.href + "results.html", "_blank")});
+r1Results.addEventListener("click", () => {window.open(window.location.href + "results.html", "_blank")});
+r2Results.addEventListener("click", () => {window.open(window.location.href + "results.html", "_blank")});
+
 
 for(const button of buttons)
 {
