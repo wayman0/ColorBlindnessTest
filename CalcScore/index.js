@@ -25,14 +25,6 @@ const rgRowColors = new Array(row0B.length);
 const gbRowColors = new Array(row1B.length);
 const brRowColors = new Array(row2B.length);
 
-// export to allow them to be used in the results files
-export const totRYScore = new Array();
-export const totYGScore = new Array();
-export const totGCScore = new Array();
-export const totCBScore = new Array();
-export const totBPScore = new Array();
-export const totPRScore = new Array();
-
 for(let index = 0; index < rgRowColors.length; index += 1)
 {
     rgRowColors[index] = getComputedStyle(row0B[index])['backgroundColor'];
@@ -43,7 +35,7 @@ for(let index = 0; index < rgRowColors.length; index += 1)
 let dragged;
 let buttonOver;
 
-//randomizeRows();
+randomizeRows();
 
 r0Check.addEventListener("click", checkRow0);
 r1Check.addEventListener("click", checkRow1);
@@ -184,9 +176,6 @@ function checkRow0(e)
         }
     }
 
-    totRYScore.push(ryScore);
-    totYGScore.push(ygScore);
-
     alert("Your red yellow score is: " + ryScore + "\nYour yellow green score is: " + ygScore);
 }
 
@@ -221,9 +210,6 @@ function checkRow1(e)
         }
     }
 
-    totGCScore.push(gcScore);
-    totCBScore.push(cbScore);
-
     alert("Your green cyan score is: " + gcScore + "\nYour cyan blue score is: " + cbScore);
 }
 
@@ -257,9 +243,6 @@ function checkRow2(e)
                 prScore += calcDistance(row2B[index], index, brRowColors);
         }
     }
-
-    totBPScore.push(bpScore);
-    totPRScore.push(prScore);
 
     alert("Your blue purple score is: " + bpScore + "\nYour purple red score is: " + prScore);
 }
