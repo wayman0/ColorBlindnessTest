@@ -27,9 +27,16 @@ for(let numAttempts = 0; numAttempts < totRGScore.length; numAttempts += 1)
     const ctx = canv.getContext("2d");
     
     const lineGrad = ctx.createLinearGradient(0, 0, canv.width, 0);
-    const delta = 1/25;
-    for(let x = 0; x < rgRowColors.length-1; x += 1)
-            lineGrad.addColorStop(x*delta, rgRowColors[x]);
+    //const delta = 1/25;
+    //for(let x = 0; x < rgRowColors.length-1; x += 1)
+    //        lineGrad.addColorStop(x*delta, rgRowColors[x]);
+
+    lineGrad.addColorStop(0.0, "rgba(255, 000, 000, 1)");
+    lineGrad.addColorStop(0.5, "rgba(255, 255, 000, 1)");
+    lineGrad.addColorStop(1.0, "rgba(000, 255, 000, 1)");
+
+    ctx.fillStyle = lineGrad;
+    ctx.fillRect(0, 0, canv.width, canv.height);
 
     const myChart = new Chart(ctx, 
         {
@@ -40,18 +47,18 @@ for(let numAttempts = 0; numAttempts < totRGScore.length; numAttempts += 1)
                         [{
                             label: "Red Green Scores",
                             data: totRGScore[numAttempts],
-
+    
                             borderWidth: 1,
                             borderColor: lineGrad,
-
+    
                             pointRadius: 3,
-                            pointBorderColor: lineGrad,
-                            pointBackgroundColor: lineGrad,
-
+                            pointBorderColor: "black",//lineGrad,
+                            pointBackgroundColor: "black",//lineGrad,
+    
                             lineTension: 0,
-
-                            fill: true,
-                            backgroundColor: lineGrad
+    
+                            //fill: true,
+                            //backgroundColor: lineGrad
                         }]
                     },
         });
