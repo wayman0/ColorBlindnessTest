@@ -39,29 +39,30 @@ for(let numAttempts = 0; numAttempts < totRGScore.length; numAttempts += 1)
     ctx.fillRect(0, 0, canv.width, canv.height);
 
     const myChart = new Chart(ctx, 
+    {
+        type: 'line',
+        data:   
         {
-            type: 'line',
-            data:   {
-                        labels: rgRowColors,
-                        datasets: 
-                        [{
-                            label: "Red Green Scores",
-                            data: totRGScore[numAttempts],
-    
-                            borderWidth: 1,
-                            borderColor: lineGrad,
-    
-                            pointRadius: 3,
-                            pointBorderColor: "black",//lineGrad,
-                            pointBackgroundColor: "black",//lineGrad,
-    
-                            lineTension: 0,
-    
-                            //fill: true,
-                            //backgroundColor: lineGrad
-                        }]
-                    },
-        });
+            labels: rgRowColors,
+            datasets: 
+            [{
+                label: "Red Green Score #" + (numAttempts + 1),
+                data: totRGScore[numAttempts],
+
+                borderWidth: 1,
+                borderColor: "black",
+
+                pointRadius: 3,
+                pointBorderColor: "black",//lineGrad,
+                pointBackgroundColor: "black",//lineGrad,
+
+                lineTension: 0,
+                
+                fill: false,
+                //backgroundColor: lineGrad
+            }]
+        }
+    });
 }
 
 for(let numAttempts = 0; numAttempts < totGBScore.length; numAttempts += 1)
@@ -85,73 +86,76 @@ for(let numAttempts = 0; numAttempts < totGBScore.length; numAttempts += 1)
     lineGrad.addColorStop(1.0, "rgb(000, 000, 255)");
 
     const myChart = new Chart(ctx, 
+    {
+        type: 'line',
+        data:   
         {
-            type: 'line',
-            data:   {
-                        labels: gbRowColors,
-                        datasets: 
-                        [{
-                            label: "Green Blue Scores",
-                            data: totGBScore[numAttempts],
+            labels: gbRowColors,
+            datasets: 
+            [{
+                label: "Green Blue Scores #" + (numAttempts + 1),
+                data: totGBScore[numAttempts],
 
-                            borderWidth: 1,
-                            borderColor: lineGrad,
-
-                            pointRadius: 3,
-                            pointBorderColor: lineGrad,
-                            pointBackgroundColor: lineGrad,
-
-                            lineTension: 0,
-                            fill: true,
-                            backgroundColor: lineGrad
-                        }]
-                    },
-        });
+                borderWidth: 1,
+                borderColor: lineGrad,
+                
+                pointRadius: 3,
+                pointBorderColor: lineGrad,
+                pointBackgroundColor: lineGrad,
+                
+                lineTension: 0,
+                
+                fill: true,
+                backgroundColor: lineGrad
+            }]
+        }
+    });
 }
 
-
 for(let numAttempts = 0; numAttempts < totBRScore.length; numAttempts += 1)
-    {    
-        const canvCont = document.createElement("div");
-        canvCont.id = "r2a" + numAttempts + "D";
-        canvCont.className = "graphDiv";
-    
-        const canv = document.createElement("canvas");
-        canv.id = "r2a" + numAttempts;
-        canv.className = "graph";
-    
-        r2.appendChild(canvCont);
-        canvCont.appendChild(canv);
-    
-        const ctx = canv.getContext("2d");
-        
-        const lineGrad = ctx.createLinearGradient(0, 0, canv.width, 0);
-        lineGrad.addColorStop(0.0, "rgb(000, 000, 255)");
-        lineGrad.addColorStop(0.5, "rgb(255, 000, 255)");
-        lineGrad.addColorStop(1.0, "rgb(255, 000, 000)");
-    
-        const myChart = new Chart(ctx, 
-            {
-                type: 'line',
-                data:   {
-                            labels: brRowColors,
-                            datasets: 
-                            [{
-                                label: "Blue Red Scores",
-                                data: totBRScore[numAttempts],
-    
-                                borderWidth: 1,
-                                borderColor: lineGrad,
-    
-                                pointRadius: 3,
-                                pointBorderColor: lineGrad,
-                                pointBackgroundColor: lineGrad,
-    
-                                lineTension: 0,
+{    
+    const canvCont = document.createElement("div");
+    canvCont.id = "r2a" + numAttempts + "D";
+    canvCont.className = "graphDiv";
 
-                                fill: true,
-                                backgroundColor: lineGrad
-                            }]
-                        },
-            });
-    }
+    const canv = document.createElement("canvas");
+    canv.id = "r2a" + numAttempts;
+    canv.className = "graph";
+
+    r2.appendChild(canvCont);
+    canvCont.appendChild(canv);
+
+    canvCont.style.background = "linear-gradient(to right, rgb(000, 000, 255), rgb(255, 000, 255), rgb(255, 000, 000))";
+    const ctx = canv.getContext("2d");
+    
+    const lineGrad = ctx.createLinearGradient(0, 0, canv.width, 0);
+    lineGrad.addColorStop(0.0, "rgb(000, 000, 255)");
+    lineGrad.addColorStop(0.5, "rgb(255, 000, 255)");
+    lineGrad.addColorStop(1.0, "rgb(255, 000, 000)");
+
+    const myChart = new Chart(ctx, 
+    {
+        type: 'line',
+        data:   
+        {
+            labels: brRowColors,
+            datasets: 
+            [{
+                label: "Blue Red Scores #" + (numAttempts + 1),
+                data: totBRScore[numAttempts],
+
+                borderWidth: 1,
+                borderColor: "black",
+
+                pointRadius: 3,
+                pointBorderColor: "black",
+                pointBackgroundColor: "black",
+
+                lineTension: 0,
+
+                fill: false,
+                //backgroundColor: lineGrad
+            }]
+        }
+    });
+}
