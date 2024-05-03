@@ -26,6 +26,7 @@ for(let numAttempts = 0; numAttempts < totRYScore.length; numAttempts += 1)
     const colLabel = ["red-yellow", "yellow-green"];
     const colData =  [totRYScore[numAttempts], totYGScore[numAttempts]];
 
+    /*
     const chartData = 
     {
         labels: colLabel,
@@ -42,8 +43,8 @@ for(let numAttempts = 0; numAttempts < totRYScore.length; numAttempts += 1)
     };
 
     const radar = new Chart(canv.getContext("2d")).Radar(chartData);
-
-    /*
+    */
+    
     const w = canv.width;
     const h = canv.height;
     const ctx = canv.getContext("2d");
@@ -78,7 +79,7 @@ for(let numAttempts = 0; numAttempts < totRYScore.length; numAttempts += 1)
                                     }]
                     }
         });
-    */
+    
 }
 
 for(let numAttempts = 0; numAttempts < totGCScore.length; numAttempts += 1)
