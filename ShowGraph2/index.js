@@ -176,6 +176,9 @@ function checkRow0(e)
         const color = getComputedStyle(button)['backgroundColor'];
         const loc = findLocation(color, rgRowColors);
 
+        if(loc != x)
+            button.textContent = "X";
+
         totRGScore[totRGScore.length-1][x] = Math.abs(loc - x);
     }
 
@@ -193,6 +196,9 @@ function checkRow1(e)
         const color = getComputedStyle(button)['backgroundColor'];
         const loc = findLocation(color, gbRowColors);
 
+        if(loc != x)
+            button.textContent = "X";
+
         totGBScore[totGBScore.length-1][x] = Math.abs(loc - x);
     }
 
@@ -209,6 +215,9 @@ function checkRow2(e)
         const button = row2B[x];
         const color = getComputedStyle(button)['backgroundColor'];
         const loc = findLocation(color, brRowColors);
+
+        if(loc != x)
+            button.textContent = "X";
 
         totBRScore[totBRScore.length-1][x] = Math.abs(loc - x);
     }

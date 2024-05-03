@@ -27,9 +27,9 @@ for(let numAttempts = 0; numAttempts < totRGScore.length; numAttempts += 1)
     const ctx = canv.getContext("2d");
     
     const lineGrad = ctx.createLinearGradient(0, 0, canv.width, 0);
-    lineGrad.addColorStop(0.0, "rgb(250, 020, 000)");
-    lineGrad.addColorStop(0.5, "rgb(255, 255, 000)");
-    lineGrad.addColorStop(1.0, "rgb(020, 250, 000)");
+    const delta = 1/25;
+    for(let x = 0; x < rgRowColors.length-1; x += 1)
+            lineGrad.addColorStop(x*delta, rgRowColors[x]);
 
     const myChart = new Chart(ctx, 
         {
@@ -41,51 +41,24 @@ for(let numAttempts = 0; numAttempts < totRGScore.length; numAttempts += 1)
                             label: "Red Green Scores",
                             data: totRGScore[numAttempts],
 
-                            borderColor:                lineGrad,
-                            pointBorderColor:           "rgb(0, 0, 0)",
-                            pointBackgroundColor:       lineGrad,
-                            pointRadius: 1,
+                            borderWidth: 1,
+                            borderColor: lineGrad,
 
-                            //fill: true,
-                            //backgroundColor: lineGrad,
-                            //borderWidth: 4
+                            pointRadius: 3,
+                            pointBorderColor: lineGrad,
+                            pointBackgroundColor: lineGrad,
+
+                            lineTension: 0,
+
+                            fill: true,
+                            backgroundColor: lineGrad
                         }]
                     },
-            options:{
-                legend: {   position: "bottom"},
-                /*
-                scales: {
-                            yAxes: [{
-                                        ticks:      {
-                                                        fontColor: "rgba(0,0,0,0.5)",
-                                                        fontStyle: "bold",
-                                                        beginAtZero: true,
-                                                        maxTicksLimit: 5,
-                                                        padding: 20
-                                                    },
-                                        gridLines:  {
-                                                        drawTicks: true,
-                                                        display: true
-                                                    }
-                                    }], 
-                            xAxes: [{
-                                        ticks:      {
-                                                        padding: 20,
-                                                        fontColor: "rgba(0,0,0,0.5)",
-                                                        fontStyle: "bold"
-                                                    },
-                                        gridLines:  {
-                                                        zeroLineColor: "transparent"
-                                                    } 
-                                    }]
-                        }
-                */
-                    }
         });
 }
 
 for(let numAttempts = 0; numAttempts < totGBScore.length; numAttempts += 1)
-{
+{    
     const canvCont = document.createElement("div");
     canvCont.id = "r1a" + numAttempts + "D";
     canvCont.className = "graphDiv";
@@ -96,18 +69,82 @@ for(let numAttempts = 0; numAttempts < totGBScore.length; numAttempts += 1)
 
     r1.appendChild(canvCont);
     canvCont.appendChild(canv);
+
+    const ctx = canv.getContext("2d");
+    
+    const lineGrad = ctx.createLinearGradient(0, 0, canv.width, 0);
+    lineGrad.addColorStop(0.0, "rgb(000, 255, 000)");
+    lineGrad.addColorStop(0.5, "rgb(000, 255, 255)");
+    lineGrad.addColorStop(1.0, "rgb(000, 000, 255)");
+
+    const myChart = new Chart(ctx, 
+        {
+            type: 'line',
+            data:   {
+                        labels: gbRowColors,
+                        datasets: 
+                        [{
+                            label: "Green Blue Scores",
+                            data: totGBScore[numAttempts],
+
+                            borderWidth: 1,
+                            borderColor: lineGrad,
+
+                            pointRadius: 3,
+                            pointBorderColor: lineGrad,
+                            pointBackgroundColor: lineGrad,
+
+                            lineTension: 0,
+                            fill: true,
+                            backgroundColor: lineGrad
+                        }]
+                    },
+        });
 }
+
 
 for(let numAttempts = 0; numAttempts < totBRScore.length; numAttempts += 1)
-{
-    const canvCont = document.createElement("div");
-    canvCont.id = "r2a" + numAttempts + "D";
-    canvCont.className = "graphDiv";
+    {    
+        const canvCont = document.createElement("div");
+        canvCont.id = "r2a" + numAttempts + "D";
+        canvCont.className = "graphDiv";
+    
+        const canv = document.createElement("canvas");
+        canv.id = "r2a" + numAttempts;
+        canv.className = "graph";
+    
+        r2.appendChild(canvCont);
+        canvCont.appendChild(canv);
+    
+        const ctx = canv.getContext("2d");
+        
+        const lineGrad = ctx.createLinearGradient(0, 0, canv.width, 0);
+        lineGrad.addColorStop(0.0, "rgb(000, 000, 255)");
+        lineGrad.addColorStop(0.5, "rgb(255, 000, 255)");
+        lineGrad.addColorStop(1.0, "rgb(255, 000, 000)");
+    
+        const myChart = new Chart(ctx, 
+            {
+                type: 'line',
+                data:   {
+                            labels: brRowColors,
+                            datasets: 
+                            [{
+                                label: "Blue Red Scores",
+                                data: totBRScore[numAttempts],
+    
+                                borderWidth: 1,
+                                borderColor: lineGrad,
+    
+                                pointRadius: 3,
+                                pointBorderColor: lineGrad,
+                                pointBackgroundColor: lineGrad,
+    
+                                lineTension: 0,
 
-    const canv = document.createElement("canvas");
-    canv.id = "r2a" + numAttempts;
-    canv.className = "graph";
-
-    r2.appendChild(canvCont);
-    canvCont.appendChild(canv);
-}
+                                fill: true,
+                                backgroundColor: lineGrad
+                            }]
+                        },
+            });
+    }
