@@ -28,13 +28,19 @@ const rgRowColors = new Array(row0B.length);
 const gbRowColors = new Array(row1B.length);
 const brRowColors = new Array(row2B.length);
 
-// export to allow them to be used in the results files
-export const totRYScore = new Array();
-export const totYGScore = new Array();
-export const totGCScore = new Array();
-export const totCBScore = new Array();
-export const totBPScore = new Array();
-export const totPRScore = new Array();
+const totRYScore = new Array();
+const totYGScore = new Array();
+const totGCScore = new Array();
+const totCBScore = new Array();
+const totBPScore = new Array();
+const totPRScore = new Array();
+
+window.totRYScore = totRYScore;
+window.totYGScore = totYGScore;
+window.totGCScore = totGCScore;
+window.totCBScore = totCBScore;
+window.totBPScore = totBPScore;
+window.totPRScore = totPRScore;
 
 for(let index = 0; index < rgRowColors.length; index += 1)
 {
@@ -46,7 +52,7 @@ for(let index = 0; index < rgRowColors.length; index += 1)
 let dragged;
 let buttonOver;
 
-//randomizeRows();
+randomizeRows();
 
 r0Check.addEventListener("click", checkRow0);
 r1Check.addEventListener("click", checkRow1);
@@ -60,10 +66,9 @@ r0Hide.addEventListener("click", () => {row0S.style.visibility = "hidden";});
 r1Hide.addEventListener("click", () => {row1S.style.visibility = "hidden";});
 r2Hide.addEventListener("click", () => {row2S.style.visibility = "hidden";});
 
-r0Results.addEventListener("click", () => {window.open(window.location.href + "results.html", "_blank")});
-r1Results.addEventListener("click", () => {window.open(window.location.href + "results.html", "_blank")});
-r2Results.addEventListener("click", () => {window.open(window.location.href + "results.html", "_blank")});
-
+r0Results.addEventListener("click", seeResults);
+r1Results.addEventListener("click", seeResults);
+r2Results.addEventListener("click", seeResults);
 
 for(const button of buttons)
 {
@@ -195,7 +200,8 @@ function checkRow0(e)
     totRYScore.push(ryScore);
     totYGScore.push(ygScore);
 
-    alert("Your red yellow score is: " + ryScore + "\nYour yellow green score is: " + ygScore);
+    if(e)
+        alert("Your red yellow score is: " + ryScore + "\nYour yellow green score is: " + ygScore);
 }
 
 function checkRow1(e)
@@ -232,7 +238,8 @@ function checkRow1(e)
     totGCScore.push(gcScore);
     totCBScore.push(cbScore);
 
-    alert("Your green cyan score is: " + gcScore + "\nYour cyan blue score is: " + cbScore);
+    if(e)
+        alert("Your green cyan score is: " + gcScore + "\nYour cyan blue score is: " + cbScore);
 }
 
 function checkRow2(e)
@@ -269,7 +276,8 @@ function checkRow2(e)
     totBPScore.push(bpScore);
     totPRScore.push(prScore);
 
-    alert("Your blue purple score is: " + bpScore + "\nYour purple red score is: " + prScore);
+    if(e)
+        alert("Your blue purple score is: " + bpScore + "\nYour purple red score is: " + prScore);
 }
 
 /**
@@ -295,4 +303,13 @@ function calcDistance(button, bIndex, row)
     }
 
     return distance;
+}
+
+function seeResults(e)
+{
+    checkRow0();
+    checkRow1();
+    checkRow2();
+
+    window.open(window.location.href + "results.html", "_blank");
 }
