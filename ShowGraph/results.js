@@ -23,12 +23,9 @@ for(let numAttempts = 0; numAttempts < totRYScore.length; numAttempts += 1)
     r0.appendChild(canvCont);
     canvCont.appendChild(canv);
 
-    //fillBackgroundR0(canv);
-
     const colLabel = ["red-yellow", "yellow-green"];
     const colData =  [totRYScore[numAttempts], totYGScore[numAttempts]];
 
-    /*
     const chartData = 
     {
         labels: colLabel,
@@ -45,8 +42,8 @@ for(let numAttempts = 0; numAttempts < totRYScore.length; numAttempts += 1)
     };
 
     const radar = new Chart(canv.getContext("2d")).Radar(chartData);
-    */
 
+    /*
     const w = canv.width;
     const h = canv.height;
     const ctx = canv.getContext("2d");
@@ -81,7 +78,7 @@ for(let numAttempts = 0; numAttempts < totRYScore.length; numAttempts += 1)
                                     }]
                     }
         });
-
+    */
 }
 
 for(let numAttempts = 0; numAttempts < totGCScore.length; numAttempts += 1)
@@ -194,32 +191,4 @@ function showAllResults()
 
         const radar = new Chart(canv.getContext("2d")).Radar(chartData);
     }
-}
-
-function fillBackgroundR0(canv)
-{
-    alert("filling canvas");
-
-    const w = canv.width;
-    const h = canv.height;
-
-    const ctx = canv.getContext("2d");
-    
-    const lineGrad = ctx.createLinearGradient(0, 0, 0, h);
-    lineGrad.addColorStop(0.00, "rgb(255, 000, 000)");
-    lineGrad.addColorStop(0.50, "rgb(255, 255, 000)");
-    lineGrad.addColorStop(1.00, "rgb(000, 255, 000)");
-
-    ctx.fillStyle = lineGrad;
-    ctx.fillRect(0, 0, w, h);
-}
-
-function fillBackgroundR1(canv)
-{
-
-}
-
-function fillBackgroundR2(canv)
-{
-
 }
