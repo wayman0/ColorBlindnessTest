@@ -159,3 +159,61 @@ for(let numAttempts = 0; numAttempts < totBRScore.length; numAttempts += 1)
         }
     });
 }
+
+const minAttempts = Math.min(totRGScore.length, totGBScore.length, totBRScore.length);
+for(let numAttempts = 0; numAttempts < minAttempts; numAttempts += 1)
+{    
+    const canvCont = document.createElement("div");
+    canvCont.id = "all" + numAttempts + "D";
+    canvCont.className = "graphDiv";
+
+    const canv = document.createElement("canvas");
+    canv.id = "all" + numAttempts;
+    canv.className = "graph";
+
+    all.appendChild(canvCont);
+    canvCont.appendChild(canv);
+
+    const ctx = canv.getContext("2d");
+    
+    const xLabel = new Array(rgRowColors.length);
+    for(let index = 0; index < xLabel.length; index += 1)
+            xLabel[index] = "Stop " + (index + 1);
+
+    const myChart = new Chart(ctx, 
+    {
+        type: 'line',
+        data:   
+        {
+            labels: xLabel,
+            datasets: 
+            [{
+                // create the red green line
+                    data: totRGScore[numAttempts],
+                    borderColor: "red", 
+                    fill: false
+                }, 
+
+                // create the green blue line
+                {
+                    data: totGBScore[numAttempts],
+                    borderColor: "green", 
+                    fill: false
+                },
+
+                // create the blue red line
+                {
+                    data: totBRScore[numAttempts],
+                    borderColor: "blue", 
+                    fill: false
+            }]
+        },
+        options: 
+        {
+            legend: 
+            {
+                display: false
+            }
+        }
+    });
+}
