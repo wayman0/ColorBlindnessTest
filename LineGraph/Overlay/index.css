@@ -1,0 +1,304 @@
+body
+{
+    width:95%;
+    height:95%;
+
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+#title
+{
+    width: 100%;
+    height: 5%;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+#row0
+{
+    position: absolute;
+    top: 10%;
+    left:0%;
+    width:100%;
+    height:13%;
+}
+
+#row1
+{
+    position: absolute;
+    top: 40%;
+    left:0%;   
+    width:100%;
+    height:13%;
+}
+
+#row2
+{
+    position: absolute;
+    top: 70%;
+    left:0%;
+    width:100%;
+    height:13%;
+}
+
+.showRow
+{
+    visibility: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+    height:49%;
+}
+
+.buttRow
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    height:49%;
+}
+
+.optsRow
+{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1%;
+
+    margin-top: 1%;
+}
+
+.showButton
+{
+    width:3%;
+    height:95%;
+}
+
+.rowButton
+{
+    width:3%;
+    height:95%;
+}
+
+.check
+{
+    width:7.5%;
+    height: 15%;
+}
+
+.show
+{
+    width:7.5%;
+    height:15%;
+}
+
+.hide
+{
+    width:7.5%;
+    height: 15%;
+}
+
+.results
+{
+    width:7.5%;
+    height:15%;
+}
+
+#r0b00{background-color: rgb(250, 020, 000);}
+#r0b01{background-color: rgb(250, 040, 000);}
+#r0b02{background-color: rgb(250, 060, 000);}
+#r0b03{background-color: rgb(250, 080, 000);}
+#r0b04{background-color: rgb(250, 100, 000);}
+#r0b05{background-color: rgb(250, 120, 000);}
+#r0b06{background-color: rgb(250, 140, 000);}
+#r0b07{background-color: rgb(250, 160, 000);}
+#r0b08{background-color: rgb(250, 180, 000);}
+#r0b09{background-color: rgb(250, 200, 000);}
+#r0b10{background-color: rgb(250, 220, 000);}
+#r0b11{background-color: rgb(250, 240, 000);}
+#r0b12{background-color: rgb(255, 255, 000);}
+#r0b13{background-color: rgb(240, 255, 000);}
+#r0b14{background-color: rgb(220, 255, 000);}
+#r0b15{background-color: rgb(200, 255, 000);}
+#r0b16{background-color: rgb(180, 255, 000);}
+#r0b17{background-color: rgb(160, 255, 000);}
+#r0b18{background-color: rgb(140, 255, 000);}
+#r0b19{background-color: rgb(120, 255, 000);}
+#r0b20{background-color: rgb(100, 255, 000);}
+#r0b21{background-color: rgb(080, 255, 000);}
+#r0b22{background-color: rgb(060, 255, 000);}
+#r0b23{background-color: rgb(040, 255, 000);}
+#r0b24{background-color: rgb(020, 255, 000);}
+#r0b25
+{
+    border:none;
+    outline:none;
+    background-color: rgb(255, 255, 255);
+}
+
+#r1b00{background-color: rgb(000, 250, 020);}
+#r1b01{background-color: rgb(000, 250, 040);}
+#r1b02{background-color: rgb(000, 250, 060);}
+#r1b03{background-color: rgb(000, 250, 080);}
+#r1b04{background-color: rgb(000, 250, 100);}
+#r1b05{background-color: rgb(000, 250, 120);}
+#r1b06{background-color: rgb(000, 250, 140);}
+#r1b07{background-color: rgb(000, 250, 160);}
+#r1b08{background-color: rgb(000, 250, 180);}
+#r1b09{background-color: rgb(000, 250, 200);}
+#r1b10{background-color: rgb(000, 250, 220);}
+#r1b11{background-color: rgb(000, 250, 240);}
+#r1b12{background-color: rgb(000, 255, 255);}
+#r1b13{background-color: rgb(000, 240, 255);}
+#r1b14{background-color: rgb(000, 220, 255);}
+#r1b15{background-color: rgb(000, 200, 255);}
+#r1b16{background-color: rgb(000, 180, 255);}
+#r1b17{background-color: rgb(000, 160, 255);}
+#r1b18{background-color: rgb(000, 140, 255);}
+#r1b19{background-color: rgb(000, 120, 255);}
+#r1b20{background-color: rgb(000, 100, 255);}
+#r1b21{background-color: rgb(000, 080, 255);}
+#r1b22{background-color: rgb(000, 060, 255);}
+#r1b23{background-color: rgb(000, 040, 255);}
+#r1b24{background-color: rgb(000, 020, 255);}
+#r1b25
+{
+    border:none;
+    outline:none;
+    background-color: rgb(255, 255, 255);
+}
+
+#r2b00{background-color: rgb(020, 000, 250);}
+#r2b01{background-color: rgb(040, 000, 250);}
+#r2b02{background-color: rgb(060, 000, 250);}
+#r2b03{background-color: rgb(080, 000, 250);}
+#r2b04{background-color: rgb(100, 000, 250);}
+#r2b05{background-color: rgb(120, 000, 250);}
+#r2b06{background-color: rgb(140, 000, 250);}
+#r2b07{background-color: rgb(160, 000, 250);}
+#r2b08{background-color: rgb(180, 000, 250);}
+#r2b09{background-color: rgb(200, 000, 250);}
+#r2b10{background-color: rgb(220, 000, 250);}
+#r2b11{background-color: rgb(240, 000, 250);}
+#r2b12{background-color: rgb(255, 000, 255);}
+#r2b13{background-color: rgb(255, 000, 240);}
+#r2b14{background-color: rgb(255, 000, 220);}
+#r2b15{background-color: rgb(255, 000, 200);}
+#r2b16{background-color: rgb(255, 000, 180);}
+#r2b17{background-color: rgb(255, 000, 160);}
+#r2b18{background-color: rgb(255, 000, 140);}
+#r2b19{background-color: rgb(255, 000, 120);}
+#r2b20{background-color: rgb(255, 000, 100);}
+#r2b21{background-color: rgb(255, 000, 080);}
+#r2b22{background-color: rgb(255, 000, 060);}
+#r2b23{background-color: rgb(255, 000, 040);}
+#r2b24{background-color: rgb(255, 000, 020);}
+#r2b25
+{
+    border:none;
+    outline:none;
+    background-color: rgb(255, 255, 255);
+}
+
+#r0s00{background-color: rgb(250, 020, 000);}
+#r0s01{background-color: rgb(250, 040, 000);}
+#r0s02{background-color: rgb(250, 060, 000);}
+#r0s03{background-color: rgb(250, 080, 000);}
+#r0s04{background-color: rgb(250, 100, 000);}
+#r0s05{background-color: rgb(250, 120, 000);}
+#r0s06{background-color: rgb(250, 140, 000);}
+#r0s07{background-color: rgb(250, 160, 000);}
+#r0s08{background-color: rgb(250, 180, 000);}
+#r0s09{background-color: rgb(250, 200, 000);}
+#r0s10{background-color: rgb(250, 220, 000);}
+#r0s11{background-color: rgb(250, 240, 000);}
+#r0s12{background-color: rgb(255, 255, 000);}
+#r0s13{background-color: rgb(240, 255, 000);}
+#r0s14{background-color: rgb(220, 255, 000);}
+#r0s15{background-color: rgb(200, 255, 000);}
+#r0s16{background-color: rgb(180, 255, 000);}
+#r0s17{background-color: rgb(160, 255, 000);}
+#r0s18{background-color: rgb(140, 255, 000);}
+#r0s19{background-color: rgb(120, 255, 000);}
+#r0s20{background-color: rgb(100, 255, 000);}
+#r0s21{background-color: rgb(080, 255, 000);}
+#r0s22{background-color: rgb(060, 255, 000);}
+#r0s23{background-color: rgb(040, 255, 000);}
+#r0s24{background-color: rgb(020, 255, 000);}
+#r0s25
+{
+    border:none;
+    outline:none;
+    background-color: rgb(255, 255, 255);
+}
+
+#r1s00{background-color: rgb(000, 250, 020);}
+#r1s01{background-color: rgb(000, 250, 040);}
+#r1s02{background-color: rgb(000, 250, 060);}
+#r1s03{background-color: rgb(000, 250, 080);}
+#r1s04{background-color: rgb(000, 250, 100);}
+#r1s05{background-color: rgb(000, 250, 120);}
+#r1s06{background-color: rgb(000, 250, 140);}
+#r1s07{background-color: rgb(000, 250, 160);}
+#r1s08{background-color: rgb(000, 250, 180);}
+#r1s09{background-color: rgb(000, 250, 200);}
+#r1s10{background-color: rgb(000, 250, 220);}
+#r1s11{background-color: rgb(000, 250, 240);}
+#r1s12{background-color: rgb(000, 255, 255);}
+#r1s13{background-color: rgb(000, 240, 255);}
+#r1s14{background-color: rgb(000, 220, 255);}
+#r1s15{background-color: rgb(000, 200, 255);}
+#r1s16{background-color: rgb(000, 180, 255);}
+#r1s17{background-color: rgb(000, 160, 255);}
+#r1s18{background-color: rgb(000, 140, 255);}
+#r1s19{background-color: rgb(000, 120, 255);}
+#r1s20{background-color: rgb(000, 100, 255);}
+#r1s21{background-color: rgb(000, 080, 255);}
+#r1s22{background-color: rgb(000, 060, 255);}
+#r1s23{background-color: rgb(000, 040, 255);}
+#r1s24{background-color: rgb(000, 020, 255);}
+#r1s25
+{
+    border:none;
+    outline:none;
+    background-color: rgb(255, 255, 255);
+}
+
+#r2s00{background-color: rgb(020, 000, 250);}
+#r2s01{background-color: rgb(040, 000, 250);}
+#r2s02{background-color: rgb(060, 000, 250);}
+#r2s03{background-color: rgb(080, 000, 250);}
+#r2s04{background-color: rgb(100, 000, 250);}
+#r2s05{background-color: rgb(120, 000, 250);}
+#r2s06{background-color: rgb(140, 000, 250);}
+#r2s07{background-color: rgb(160, 000, 250);}
+#r2s08{background-color: rgb(180, 000, 250);}
+#r2s09{background-color: rgb(200, 000, 250);}
+#r2s10{background-color: rgb(220, 000, 250);}
+#r2s11{background-color: rgb(240, 000, 250);}
+#r2s12{background-color: rgb(255, 000, 255);}
+#r2s13{background-color: rgb(255, 000, 240);}
+#r2s14{background-color: rgb(255, 000, 220);}
+#r2s15{background-color: rgb(255, 000, 200);}
+#r2s16{background-color: rgb(255, 000, 180);}
+#r2s17{background-color: rgb(255, 000, 160);}
+#r2s18{background-color: rgb(255, 000, 140);}
+#r2s19{background-color: rgb(255, 000, 120);}
+#r2s20{background-color: rgb(255, 000, 100);}
+#r2s21{background-color: rgb(255, 000, 080);}
+#r2s22{background-color: rgb(255, 000, 060);}
+#r2s23{background-color: rgb(255, 000, 040);}
+#r2s24{background-color: rgb(255, 000, 020);}
+#r2s25
+{
+    border:none;
+    outline:none;
+    background-color: rgb(255, 255, 255);
+}
