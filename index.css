@@ -5,9 +5,17 @@ body
 
     margin-left: 2.5%;
     margin-right: 2.5%;
+
+    padding-top: 3%;
+
+    display:flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;    
 }
 
-#title
+.title
 {
     width: 100%;
     height: 5%;
@@ -16,122 +24,39 @@ body
     font-weight: bolder;
 }
 
-#row0
+.section 
 {
-    position: absolute;
-    top: 5%;
-    left:0%;
-    width:100%;
-    height:30%;
+    width: 100%;
+    height: 300px;
 
-}
-
-#row1
-{
-    position: absolute;
-    top: 36%;
-    left:0%;   
-    width:100%;
-    height:30%;
-}
-
-#row2
-{
-    position: absolute;
-    top: 67%;
-    left:0%;
-    width:100%;
-    height:30%;
-}
-
-.row
-{
     display: flex;
-    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+}
+            
+.section div 
+{
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+    
+    min-width: 7.5%;
+    max-width: 25%;
+    
+    width: 100%;
+    height: 100%;
+    
+    cursor: pointer;
+    
+    display: flex;
     align-items: center;
     justify-content: center;
+
+    text-align: center;
+    font-size: xx-large;
 }
 
-.rowButton
+.section div:last-of-type
 {
-    width:3%;
-    height:20%;
+    border-right: 3px solid black;
 }
-
-#r0b00{background-color: rgb(255, 000, 000);}
-#r0b01{background-color: rgb(245, 010, 000);}
-#r0b02{background-color: rgb(235, 020, 000);}
-#r0b03{background-color: rgb(225, 030, 000);}
-#r0b04{background-color: rgb(215, 040, 000);}
-#r0b05{background-color: rgb(205, 050, 000);}
-#r0b06{background-color: rgb(195, 060, 000);}
-#r0b07{background-color: rgb(185, 070, 000);}
-#r0b08{background-color: rgb(175, 080, 000);}
-#r0b09{background-color: rgb(165, 090, 000);}
-#r0b10{background-color: rgb(155, 100, 000);}
-#r0b11{background-color: rgb(145, 110, 000);}
-#r0b12{background-color: rgb(135, 120, 000);}
-#r0b13{background-color: rgb(125, 130, 000);}
-#r0b14{background-color: rgb(115, 140, 000);}
-#r0b15{background-color: rgb(105, 150, 000);}
-#r0b16{background-color: rgb(095, 160, 000);}
-#r0b17{background-color: rgb(085, 170, 000);}
-#r0b18{background-color: rgb(075, 180, 000);}
-#r0b19{background-color: rgb(065, 190, 000);}
-#r0b20{background-color: rgb(055, 200, 000);}
-#r0b21{background-color: rgb(045, 210, 000);}
-#r0b22{background-color: rgb(035, 220, 000);}
-#r0b23{background-color: rgb(025, 230, 000);}
-#r0b24{background-color: rgb(015, 240, 000);}
-
-#r1b00{background-color: rgb(000, 255, 000);}
-#r1b01{background-color: rgb(000, 245, 010);}
-#r1b02{background-color: rgb(000, 235, 020);}
-#r1b03{background-color: rgb(000, 225, 030);}
-#r1b04{background-color: rgb(000, 215, 040);}
-#r1b05{background-color: rgb(000, 205, 050);}
-#r1b06{background-color: rgb(000, 195, 060);}
-#r1b07{background-color: rgb(000, 185, 070);}
-#r1b08{background-color: rgb(000, 175, 080);}
-#r1b09{background-color: rgb(000, 165, 090);}
-#r1b10{background-color: rgb(000, 155, 100);}
-#r1b11{background-color: rgb(000, 145, 110);}
-#r1b12{background-color: rgb(000, 135, 120);}
-#r1b13{background-color: rgb(000, 125, 130);}
-#r1b14{background-color: rgb(000, 115, 140);}
-#r1b15{background-color: rgb(000, 105, 150);}
-#r1b16{background-color: rgb(000, 095, 160);}
-#r1b17{background-color: rgb(000, 085, 170);}
-#r1b18{background-color: rgb(000, 075, 180);}
-#r1b19{background-color: rgb(000, 065, 190);}
-#r1b20{background-color: rgb(000, 055, 200);}
-#r1b21{background-color: rgb(000, 045, 210);}
-#r1b22{background-color: rgb(000, 035, 220);}
-#r1b23{background-color: rgb(000, 025, 230);}
-#r1b24{background-color: rgb(000, 015, 240);}
-
-#r2b00{background-color: rgb(000, 000, 255);}
-#r2b01{background-color: rgb(010, 000, 245);}
-#r2b02{background-color: rgb(020, 000, 235);}
-#r2b03{background-color: rgb(030, 000, 225);}
-#r2b04{background-color: rgb(040, 000, 215);}
-#r2b05{background-color: rgb(050, 000, 205);}
-#r2b06{background-color: rgb(060, 000, 195);}
-#r2b07{background-color: rgb(070, 000, 185);}
-#r2b08{background-color: rgb(080, 000, 175);}
-#r2b09{background-color: rgb(090, 000, 165);}
-#r2b10{background-color: rgb(100, 000, 155);}
-#r2b11{background-color: rgb(110, 000, 145);}
-#r2b12{background-color: rgb(120, 000, 135);}
-#r2b13{background-color: rgb(130, 000, 125);}
-#r2b14{background-color: rgb(140, 000, 115);}
-#r2b15{background-color: rgb(150, 000, 105);}
-#r2b16{background-color: rgb(160, 000, 095);}
-#r2b17{background-color: rgb(170, 000, 085);}
-#r2b18{background-color: rgb(180, 000, 075);}
-#r2b19{background-color: rgb(190, 000, 065);}
-#r2b20{background-color: rgb(200, 000, 055);}
-#r2b21{background-color: rgb(210, 000, 045);}
-#r2b22{background-color: rgb(220, 000, 035);}
-#r2b23{background-color: rgb(230, 000, 025);}
-#r2b24{background-color: rgb(240, 000, 015);}
