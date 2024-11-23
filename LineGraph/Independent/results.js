@@ -25,19 +25,15 @@ for(let numAttempts = 0; numAttempts < totRGScore.length; numAttempts += 1)
     canvCont.appendChild(canv);
 
     const ctx = canv.getContext("2d");
-    
     const lineGrad = ctx.createLinearGradient(0, 0, canv.width, 0);
-    //const delta = 1/25;
-    //for(let x = 0; x < rgRowColors.length-1; x += 1)
-    //        lineGrad.addColorStop(x*delta, rgRowColors[x]);
 
-    lineGrad.addColorStop(0.0, "rgba(255, 000, 000, 1)");
-    lineGrad.addColorStop(0.5, "rgba(255, 255, 000, 1)");
-    lineGrad.addColorStop(1.0, "rgba(000, 255, 000, 1)");
+    for(let colIndex = 0; colIndex < rgRowColors.length-1; colIndex += 1)
+        lineGrad.addColorStop(colIndex/(rgRowColors.length-1), rgRowColors[colIndex]);
 
-    ctx.fillStyle = lineGrad;
-    ctx.fillRect(0, 0, canv.width, canv.height);
-
+    //lineGrad.addColorStop(0.0, "rgb(255, 000, 000)");
+    //lineGrad.addColorStop(0.5, "rgb(255, 255, 000)");
+    //lineGrad.addColorStop(1.0, "rgb(000, 255, 000)");
+    
     const myChart = new Chart(ctx, 
     {
         type: 'line',
@@ -46,20 +42,19 @@ for(let numAttempts = 0; numAttempts < totRGScore.length; numAttempts += 1)
             labels: rgRowColors,
             datasets: 
             [{
-                label: "Red Green Score #" + (numAttempts + 1),
+                label: "Red Green Scores #" + (numAttempts + 1),
                 data: totRGScore[numAttempts],
-
                 borderWidth: 1,
-                borderColor: "black",
-
+                borderColor: lineGrad,
+                
                 pointRadius: 3,
-                pointBorderColor: "black",//lineGrad,
-                pointBackgroundColor: "black",//lineGrad,
-
+                pointBorderColor: lineGrad,
+                pointBackgroundColor: lineGrad,
+                
                 lineTension: 0,
                 
-                fill: false,
-                //backgroundColor: lineGrad
+                fill: true,
+                backgroundColor: lineGrad
             }]
         }
     });
@@ -81,9 +76,12 @@ for(let numAttempts = 0; numAttempts < totGBScore.length; numAttempts += 1)
     const ctx = canv.getContext("2d");
     
     const lineGrad = ctx.createLinearGradient(0, 0, canv.width, 0);
-    lineGrad.addColorStop(0.0, "rgb(000, 255, 000)");
-    lineGrad.addColorStop(0.5, "rgb(000, 255, 255)");
-    lineGrad.addColorStop(1.0, "rgb(000, 000, 255)");
+    for(let colIndex = 0; colIndex < gbRowColors.length-1; colIndex += 1)
+        lineGrad.addColorStop(colIndex/(gbRowColors.length-1), gbRowColors[colIndex]);
+
+    //lineGrad.addColorStop(0.0, "rgb(000, 255, 000)");
+    //lineGrad.addColorStop(0.5, "rgb(000, 255, 255)");
+    //lineGrad.addColorStop(1.0, "rgb(000, 000, 255)");
 
     const myChart = new Chart(ctx, 
     {
@@ -125,13 +123,15 @@ for(let numAttempts = 0; numAttempts < totBRScore.length; numAttempts += 1)
     r2.appendChild(canvCont);
     canvCont.appendChild(canv);
 
-    canvCont.style.background = "linear-gradient(to right, rgb(000, 000, 255), rgb(255, 000, 255), rgb(255, 000, 000))";
     const ctx = canv.getContext("2d");
-    
+
     const lineGrad = ctx.createLinearGradient(0, 0, canv.width, 0);
-    lineGrad.addColorStop(0.0, "rgb(000, 000, 255)");
-    lineGrad.addColorStop(0.5, "rgb(255, 000, 255)");
-    lineGrad.addColorStop(1.0, "rgb(255, 000, 000)");
+    for(let colIndex = 0; colIndex < brRowColors.length-1; colIndex += 1)
+        lineGrad.addColorStop(colIndex/(brRowColors.length-1), brRowColors[colIndex]);
+
+    //lineGrad.addColorStop(0.0, "rgb(000, 000, 255)");
+    //lineGrad.addColorStop(0.5, "rgb(255, 000, 255)");
+    //lineGrad.addColorStop(1.0, "rgb(255, 000, 000)");
 
     const myChart = new Chart(ctx, 
     {
@@ -143,18 +143,17 @@ for(let numAttempts = 0; numAttempts < totBRScore.length; numAttempts += 1)
             [{
                 label: "Blue Red Scores #" + (numAttempts + 1),
                 data: totBRScore[numAttempts],
-
                 borderWidth: 1,
-                borderColor: "black",
-
+                borderColor: lineGrad,
+                
                 pointRadius: 3,
-                pointBorderColor: "black",
-                pointBackgroundColor: "black",
-
+                pointBorderColor: lineGrad,
+                pointBackgroundColor: lineGrad,
+                
                 lineTension: 0,
-
-                fill: false,
-                //backgroundColor: lineGrad
+                
+                fill: true,
+                backgroundColor: lineGrad
             }]
         }
     });
