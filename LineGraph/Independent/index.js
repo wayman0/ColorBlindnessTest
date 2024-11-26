@@ -179,9 +179,6 @@ function checkRow0(e)
 
         totRGScore[totRGScore.length-1][x] = Math.abs(loc - x);
     }
-
-    if(e)
-        alert("Your score is: " + sum(totRGScore[totRGScore.length-1]));
 }
 
 function checkRow1(e)
@@ -199,9 +196,6 @@ function checkRow1(e)
 
         totGBScore[totGBScore.length-1][x] = Math.abs(loc - x);
     }
-
-    if(e)
-        alert("Your score is: " + sum(totGBScore[totGBScore.length-1]));
 }
 
 function checkRow2(e)
@@ -219,9 +213,6 @@ function checkRow2(e)
 
         totBRScore[totBRScore.length-1][x] = Math.abs(loc - x);
     }
-
-    if(e)
-        alert("Your score is: " + sum(totBRScore[totBRScore.length-1]));
 }
 
 function findLocation(color, searchArr)
