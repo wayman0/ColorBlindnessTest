@@ -87,8 +87,10 @@ function randomizeRow0()
 {
     for(let swap = 0; swap < row0B.length; swap += 1)
     {
-        const rIndex1 = Math.trunc(Math.random() * (row0B.length-1));
-        const rIndex2 = Math.trunc(Math.random() * (row0B.length-1));
+        const range = row0B.length -3; 
+
+        const rIndex1 = Math.trunc(Math.random() * (range)) + 1;
+        const rIndex2 = Math.trunc(Math.random() * (range)) + 1;
 
         const b1 = row0B[rIndex1];
         const b2 = row0B[rIndex2];
@@ -103,8 +105,10 @@ function randomizeRow1()
 {
     for(let swap = 0; swap < row1B.length; swap += 1)
     {
-        const rIndex1 = Math.trunc(Math.random() * (row1B.length-1));
-        const rIndex2 = Math.trunc(Math.random() * (row1B.length-1));
+        const range = row1B.length -3; 
+
+        const rIndex1 = Math.trunc(Math.random() * (range)) + 1;
+        const rIndex2 = Math.trunc(Math.random() * (range)) + 1;
 
         const b1 = row1B[rIndex1];
         const b2 = row1B[rIndex2];
@@ -119,8 +123,9 @@ function randomizeRow2()
 {
     for(let swap = 0; swap < row2B.length; swap += 1)
     {
-        const rIndex1 = Math.trunc(Math.random() * (row2B.length-1));
-        const rIndex2 = Math.trunc(Math.random() * (row2B.length-1));
+        const range = row2B.length -3;
+        const rIndex1 = Math.trunc(Math.random() * (range)) + 1;
+        const rIndex2 = Math.trunc(Math.random() * (range)) + 1;
 
         const b1 = row2B[rIndex1];
         const b2 = row2B[rIndex2];
