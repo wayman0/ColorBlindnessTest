@@ -26,13 +26,23 @@ for(let numAttempts = 0; numAttempts < totRGScore.length; numAttempts += 1)
 
     const ctx = canv.getContext("2d");
     const lineGrad = ctx.createLinearGradient(0, 0, canv.width, 0);
+    
+    const leftOffSet  = 0.2; // how far from the left side the lines start in percents
+    const rightOffSet = 0.0; // how far from the right side the lines stop in percents
+    const leftEdge  = 0 + leftOffSet;   
+    const rightEdge = 1 - rightOffSet;
+    const lineRange = (rightEdge - leftEdge); // Calculate how much range the lines take up
+    const stepSize = lineRange/rgRowColors.length; // split the range into n colors steps 
 
-    for(let colIndex = 0; colIndex < rgRowColors.length-1; colIndex += 1)
-        lineGrad.addColorStop(colIndex/(rgRowColors.length-1), rgRowColors[colIndex]);
+    for(let colIndex = 0; colIndex < rgRowColors.length; colIndex += 1)
+        lineGrad.addColorStop(colIndex * stepSize + leftEdge, rgRowColors[colIndex]);
 
-    //lineGrad.addColorStop(0.0, "rgb(255, 000, 000)");
-    //lineGrad.addColorStop(0.5, "rgb(255, 255, 000)");
-    //lineGrad.addColorStop(1.0, "rgb(000, 255, 000)");
+
+    // start 2/8 into the canvas because the gradient is based off of x coordinate
+    // and the lines start roughly 2/8 into the canvas  
+    //lineGrad.addColorStop(2/8, "rgb(250, 020, 000)");
+    //lineGrad.addColorStop(5/8, "rgb(250, 250, 000");
+    //lineGrad.addColorStop(8/8, "rgb(020, 250, 000)");
     
     const myChart = new Chart(ctx, 
     {
@@ -74,14 +84,21 @@ for(let numAttempts = 0; numAttempts < totGBScore.length; numAttempts += 1)
     canvCont.appendChild(canv);
 
     const ctx = canv.getContext("2d");
-    
     const lineGrad = ctx.createLinearGradient(0, 0, canv.width, 0);
-    for(let colIndex = 0; colIndex < gbRowColors.length-1; colIndex += 1)
-        lineGrad.addColorStop(colIndex/(gbRowColors.length-1), gbRowColors[colIndex]);
+    
+    const leftOffSet  = 0.2; // how far from the left side the lines start in percents
+    const rightOffSet = 0.0; // how far from the right side the lines stop in percents
+    const leftEdge  = 0 + leftOffSet;   
+    const rightEdge = 1 - rightOffSet;
+    const lineRange = (rightEdge - leftEdge); // Calculate how much range the lines take up
+    const stepSize = lineRange/gbRowColors.length; // split the range into n colors steps 
+    
+    for(let colIndex = 0; colIndex < gbRowColors.length; colIndex += 1)
+        lineGrad.addColorStop(colIndex * stepSize + leftEdge, gbRowColors[colIndex]);
 
-    //lineGrad.addColorStop(0.0, "rgb(000, 255, 000)");
-    //lineGrad.addColorStop(0.5, "rgb(000, 255, 255)");
-    //lineGrad.addColorStop(1.0, "rgb(000, 000, 255)");
+    //lineGrad.addColorStop(2/8, "rgb(000, 250, 020)");
+    //lineGrad.addColorStop(5/8, "rgb(000, 250, 250)");
+    //lineGrad.addColorStop(8/8, "rgb(000, 020, 250)");
 
     const myChart = new Chart(ctx, 
     {
@@ -124,14 +141,21 @@ for(let numAttempts = 0; numAttempts < totBRScore.length; numAttempts += 1)
     canvCont.appendChild(canv);
 
     const ctx = canv.getContext("2d");
-
     const lineGrad = ctx.createLinearGradient(0, 0, canv.width, 0);
-    for(let colIndex = 0; colIndex < brRowColors.length-1; colIndex += 1)
-        lineGrad.addColorStop(colIndex/(brRowColors.length-1), brRowColors[colIndex]);
+    
+    const leftOffSet  = 0.2; // how far from the left side the lines start in percents
+    const rightOffSet = 0.0; // how far from the right side the lines stop in percents
+    const leftEdge  = 0 + leftOffSet;   
+    const rightEdge = 1 - rightOffSet;
+    const lineRange = (rightEdge - leftEdge); // Calculate how much range the lines take up
+    const stepSize = lineRange/brRowColors.length; // split the range into n colors steps 
+    
+    for(let colIndex = 0; colIndex < brRowColors.length; colIndex += 1)
+        lineGrad.addColorStop(colIndex * stepSize + leftEdge, brRowColors[colIndex]);
 
-    //lineGrad.addColorStop(0.0, "rgb(000, 000, 255)");
-    //lineGrad.addColorStop(0.5, "rgb(255, 000, 255)");
-    //lineGrad.addColorStop(1.0, "rgb(255, 000, 000)");
+    //lineGrad.addColorStop(2/8, "rgb(020, 000, 250)");
+    //lineGrad.addColorStop(5/8, "rgb(250, 000, 250)");
+    //lineGrad.addColorStop(8/8, "rgb(250, 000, 020)");
 
     const myChart = new Chart(ctx, 
     {

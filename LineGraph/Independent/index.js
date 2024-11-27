@@ -80,7 +80,7 @@ function randomizeRow0()
 {
     for(let swap = 0; swap < row0B.length; swap += 1)
     {
-        const range = row0B.length -3; 
+        const range = row0B.length -2; 
 
         const rIndex1 = Math.trunc(Math.random() * (range)) + 1;
         const rIndex2 = Math.trunc(Math.random() * (range)) + 1;
@@ -98,7 +98,7 @@ function randomizeRow1()
 {
     for(let swap = 0; swap < row1B.length; swap += 1)
     {
-        const range = row1B.length -3; 
+        const range = row1B.length -2; 
 
         const rIndex1 = Math.trunc(Math.random() * (range)) + 1;
         const rIndex2 = Math.trunc(Math.random() * (range)) + 1;
@@ -116,7 +116,7 @@ function randomizeRow2()
 {
     for(let swap = 0; swap < row2B.length; swap += 1)
     {
-        const range = row2B.length -3;
+        const range = row2B.length -2;
         const rIndex1 = Math.trunc(Math.random() * (range)) + 1;
         const rIndex2 = Math.trunc(Math.random() * (range)) + 1;
 
